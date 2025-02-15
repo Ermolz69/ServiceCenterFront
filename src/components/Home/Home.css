@@ -1,0 +1,146 @@
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 100px;
+    background-color: #e9e5db;
+    position: relative;
+}
+
+/* Контент слева */
+.home-content {
+    max-width: 500px;
+}
+
+.home-content h1 {
+    font-size: 38px;
+    color: #1E2A30;
+    font-family: "Jost", sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 24px;
+    background-color: #8c6d51;
+    color: #fff;
+    border-radius: 30px;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: "Jost", sans-serif;
+    font-weight: 600;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #6f523e;
+}
+
+.image-container {
+    position: relative;
+    width: 550px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 150px;
+}
+
+.pc-image {
+    width: 562px;
+    height: 725px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.4));
+}
+
+.laptop-image {
+    width: 600px;
+    height: 600px;
+    flex-shrink: 0;
+    position: absolute;
+    z-index: 2;
+    right: 370px;
+    top: 20px;
+    transform: scaleX(-1) rotate(-1deg);
+    filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .home-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .home-buttons {
+        justify-content: center;
+    }
+
+    .image-container {
+        width: 100%;
+        height: auto;
+        margin-top: 40px;
+    }
+
+    .pc-image {
+        width: 350px;
+    }
+
+    .laptop-image {
+        width: 250px;
+        right: 0;
+        bottom: 10px;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .pc-image {
+        width: 300px;
+    }
+
+    .laptop-image {
+        width: 220px;
+        bottom: 0;
+        right: -20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .image-container {
+        max-width: 300px;
+    }
+
+    .pc-image {
+        width: 250px;
+    }
+
+    .laptop-image {
+        width: 180px;
+        right: 0;
+    }
+}

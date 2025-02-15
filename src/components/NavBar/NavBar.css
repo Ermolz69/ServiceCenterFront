@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@800&display=swap');
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1E2A30;
+    padding: 15px 100px;
+    color: #E6E4D8;
+    position: relative;
+}
+
+.logo h2 {
+    font-family: "Jockey One", sans-serif;
+    color: #E6E4D8;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-left: auto;
+    gap: 50px;
+}
+
+.nav-links li span {
+    cursor: pointer;
+    color: #E6E4D8;
+    text-decoration: none;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links li span.active {
+    font-family: "Jost", sans-serif;
+    font-weight: 700;
+    color: #F4A261;
+}
+
+.nav-links li span:hover {
+    text-decoration: underline;
+    color: #F4A261;
+}
+
+.shopping-cart {
+    width: 30px;
+    height: 30px;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 32px;
+    cursor: pointer;
+    margin-left: auto;
+    color: #E6E4D8;
+}
+
+@media (max-width: 1464px) {
+    .nav-bar {
+        padding: 15px 30px;
+    }
+}
+
+@media (max-width: 850px) {
+    .nav-bar {
+        padding: 12px 20px;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .shopping-cart {
+        display: none;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1E2A30;
+        width: 100%;
+        padding: 10px 0;
+        transform: translateY(-20px);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        z-index: 10;
+    }
+
+    .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+

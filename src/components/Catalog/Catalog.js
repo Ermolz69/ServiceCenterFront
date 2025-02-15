@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import '../Catalog.css';
+import './Catalog.css';
 
 function App() {
   const [selectedProduct, setSelectedProduct] = useState(null);

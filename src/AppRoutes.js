@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Main from "./App";
-import Catalog from "./components/Catalog";
+import Catalog from "./components/Catalog/Catalog";
 
 const AppRoutes = () => {
     return (
