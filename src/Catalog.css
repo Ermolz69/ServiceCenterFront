@@ -1,41 +1,55 @@
-/* Force background change */
-
-
-html, body {
+/* Убираем прокрутку */
+body{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
     height: 100%;
+}
+
+.Catalog {
+    width: 100vw;
+    height: 100vh; /* Ensure full viewport height */
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, black, white);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Ensures content stacks correctly */
+    justify-content: center; /* Centers content properly */
     align-items: center;
+    overflow: hidden;
 }
 
-::-webkit-scrollbar {
-    display: none;
+
+/* Анимация градиента от черного до белого */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-/* Ensure catalog-container is visible */
+/* Настройка для видимости catalog-container */
 .catalog-container {
-    background-color: rgba(240, 248, 255, 0.9); /* AliceBlue with 90% opacity */
-    width: 90vw;
-    height: 90vh;
+    margin-top: 70px;
+    background-color: rgba(240, 248, 255, 0.9); /* AliceBlue с 90% прозрачностью */
+    width: 91.5vw;
+    height: 85vh;
     border-radius: 10px;
     padding: 20px;
     overflow-y: auto;
-    
-    /* Center content inside */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
-    
-    /* Proper shadow */
+    margin-bottom: 80px;
+    opacity: 0.9;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -73,143 +87,102 @@ html, body {
     color: gray;
 }
 
-.circular-button {
-    width: 3vw;
-    height: 3vw;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease, right 0.3s ease; /* Smooth hover and movement animations */
-    position: fixed;
-    bottom: 10px;
-    right: 20px; /* Default position */
-    z-index: 1002;
-}
-
-.circular-button:hover {
-    transform: scale(1.2); 
-}
-
-.plus-symbol {
-    font-size: 3vw;
-    color: black;
-    user-select: none; /* Disable text selection */
-}
-
-
-/* Modal Overlay - covers the entire screen */
+/* Modal Overlay */
 .form-modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Ensures modal is on top of other content */
-  }
-  
-  /* Modal Container - for styling the modal box */
-  .modal-container {
+    z-index: 1000;
+}
+
+/* Modal Container */
+.modal-container {
     background-color: #fff;
     padding: 20px;
     height: 80vh;
     border-radius: 8px;
-    width: 50vw; /* Set a fixed width for the form */
-    max-width: 90%; /* Ensure responsiveness on smaller screens */
+    width: 50vw;
+    max-width: 90%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: left;
     overflow: auto;
     position: relative;
-  }
-  
-  /* Title of the form */
-  .modal-container h2 {
+}
+
+.modal-container button{
+    position: relative;
+    top:53%;
+    left:28%;
+    margin: 10px;
+    width: 150px;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+.modal-container button:hover{
+    transform: scale(1.1);
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.modal-container h2 {
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  /* Label styling */
-  label {
+}
+
+label {
     font-weight: bold;
     margin-bottom: 8px;
     display: block;
     color: #333;
-  }
-  
-  /* Input fields styling */
-  input[type="text"],
-  input[type="number"],
-  textarea {
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    box-sizing: border-box; /* Ensures padding is included in width */
-  }
-  
-  /* Textarea (for description) */
-  textarea {
+    box-sizing: border-box;
+}
+
+textarea {
     resize: vertical;
     min-height: 100px;
-  }
-  
-  /* Button styling for Add Product and Cancel */
-  button {
-    padding: 12px 20px;
-    margin-top: 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Button for Adding Product (Green) */
-  button[type="button"]:first-of-type {
-    background-color: #4CAF50; /* Green */
+}
+
+
+button[type="button"]:first-of-type {
+    background-color: #4CAF50;
     color: white;
-  }
-  
-  button[type="button"]:first-of-type:hover {
-    background-color: #45a049; /* Darker green on hover */
-  }
-  
-  /* Button for Cancel (Red) */
-  button[type="button"]:nth-of-type(2) {
-    background-color: #f44336; /* Red */
+}
+
+button[type="button"]:first-of-type:hover {
+    background-color: #45a049;
+}
+
+button[type="button"]:nth-of-type(2) {
+    background-color: #f44336;
     color: white;
     margin-left: 10px;
-  }
-  
-  button[type="button"]:nth-of-type(2):hover {
-    background-color: #e53935; /* Darker red on hover */
-  }
-  
-  /* Ensures modal and form look good on mobile devices */
-  @media (max-width: 500px) {
+}
+
+button[type="button"]:nth-of-type(2):hover {
+    background-color: #e53935;
+}
+
+@media (max-width: 500px) {
     .modal-container {
-      width: 90%; /* Make modal responsive */
+        width: 90%;
     }
-  }
-  
-  /* Smooth fade-in effect */
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translate(-50%, -60%);
-    }
-    to {
-      opacity: 1;
-      transform: translate(-50%, -50%);
-    }
-  }
-  
+}

@@ -1,0 +1,88 @@
+.App {
+    text-align: center;
+}
+
+.top-bar {
+    width: 100vw;
+    height: 80px;
+    flex-shrink: 0;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center the items */
+    background: #22333B;
+    color: white;
+    padding: 0 20px; /* Add some padding for spacing */
+
+}
+
+.top-bar h2 {
+    position: relative;
+    margin-right: 130px;
+    margin-left: 20px;
+    font-size: 30px;
+    color: #E6E4D8;
+    font-family: "Jockey One";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.top-bar p {
+    position: relative;
+    top:8px;
+    right: -480px;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: #E6E4D8;
+    font-family: Jost;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.top-bar p:hover{
+    transform: scale(1.2);
+
+}
+
+.top-bar a{
+    color: white;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.top-bar a:hover{
+    color: rgb(232, 200, 60);
+}
+
+.Button {
+    position: absolute;
+    border-radius: 18px;
+    height: 50px;
+    width: 150px;
+    background: #22333B;
+    border: none;
+    color: white;
+    transition: transform 0.3s ease;
+    font-size: 16px;
+}
+
+.Button:hover {
+    transform: scale(1.2);
+    background-color: #305566;
+}
+
+/* Position the first button */
+.Button:first-of-type {
+    left: 10%;  /* Position it on the left */
+    top: 400px; /* Place it at a vertical position */
+}
+
+/* Position the second button to the right of the first */
+.Button:nth-of-type(2) {
+    left: 23%;  /* 10% more to the right of the first button */
+    top: 400px; /* Same vertical position */
+}
