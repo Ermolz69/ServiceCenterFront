@@ -1,35 +1,66 @@
-import { useState, useEffect } from 'react';
-import './Catalog.css';
+import React, { useState, useEffect } from "react";
+import "./Catalog.css";
 
-function App() {
+const ProductCard = ({ product, onAddToCart }) => {
+  return (
+      <div className="product-card">
+        <div className="product-image-container">
+          <img
+              src={product.image}
+              alt={product.name}
+              className="product-image"
+          />
+        </div>
+
+        <h2 className="product-title">{product.name}</h2>
+
+        <div className="buy-block">
+          <p className="product-price">{product.price} ₴</p>
+          <button className="shopping-cart" onClick={() => onAddToCart(product)}>
+            <img
+                src={`${process.env.PUBLIC_URL}/Assets/buy-cart.svg`}
+                alt="Shopping Cart"
+            />
+          </button>
+        </div>
+
+        <div className="product-description">
+          <p>
+            Пример длинного описания: характеристики, особенности,
+            и т.д. Можно расширять при желании.
+          </p>
+        </div>
+      </div>
+  );
+};
+
+
+const ProductList = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    const storedProducts = JSON.parse(localStorage.getItem('products'));
+    localStorage.setItem("products", JSON.stringify(products));
+    const storedProducts = JSON.parse(localStorage.getItem("products"));
     if (storedProducts && storedProducts.length > 0) {
       setProducts(storedProducts);
     } else {
       const defaultProducts = [
-        { id: 1, name: 'Laptop', description: 'High-performance laptop', price: 999, image: 'https://via.placeholder.com/100' },
-        { id: 2, name: 'Smartphone', description: 'Latest model smartphone', price: 699, image: 'https://via.placeholder.com/100' },
-        { id: 3, name: 'Headphones', description: 'Noise-cancelling headphones', price: 199, image: 'https://via.placeholder.com/100' },
-        { id: 4, name: 'Tablet', description: 'Lightweight and powerful tablet', price: 499, image: 'https://via.placeholder.com/100' },
-        { id: 5, name: 'Smartwatch', description: 'Advanced fitness smartwatch', price: 299, image: 'https://via.placeholder.com/100' },
-        { id: 6, name: 'Gaming Mouse', description: 'High precision gaming mouse', price: 79, image: 'https://via.placeholder.com/100' },
-        { id: 7, name: 'Mechanical Keyboard', description: 'RGB backlit mechanical keyboard', price: 129, image: 'https://via.placeholder.com/100' },
-        { id: 8, name: 'Monitor', description: '4K UHD Monitor', price: 399, image: 'https://via.placeholder.com/100' },
-        { id: 9, name: 'External SSD', description: '1TB fast external SSD', price: 159, image: 'https://via.placeholder.com/100' },
-        { id: 10, name: 'Wireless Charger', description: 'Fast wireless charging pad', price: 49, image: 'https://via.placeholder.com/100' }
+        { id: 1, name: "Expert PC Ultimate Mega Super Duper Ultra max pentium", price: 35999, image: process.env.PUBLIC_URL + '/Assets/ProductImages/laptop.png' },
+        { id: 2, name: "Gaming Laptop", price: 45999, image: process.env.PUBLIC_URL + '/Assets/ProductImages/pc.png' },
+        { id: 3, name: "Mechanical Keyboard", price: 4999, image: process.env.PUBLIC_URL + '/Assets/image1.webp' },
+        { id: 4, name: "Mechanical Keyboard", price: 4999, image: process.env.PUBLIC_URL + '/Assets/ProductImages/laptop.png' },
+        { id: 5, name: "Mechanical Keyboard", price: 4999, image: process.env.PUBLIC_URL + '/Assets/image2.webp' },
+        { id: 6, name: "Mechanical Keyboard", price: 4999, image: process.env.PUBLIC_URL + '/Assets/ProductImages/pc.png' },
+        { id: 7, name: "Mechanical Keyboard", price: 4999, image: process.env.PUBLIC_URL + '/Assets/image2.webp' },
+        { id: 8, name: "Mechanical Keyboard", price: 4999, image: process.env.PUBLIC_URL + '/Assets/ProductImages/laptop.png' },
+        { id: 9, name: "Mechanical Keyboard", price: 4999, image: process.env.PUBLIC_URL + '/Assets/ProductImages/pc.png' },
+        { id: 10, name: "Wireless Mouse", price: 2999, image: process.env.PUBLIC_URL + '/Assets/ProductImages/pc.png' }
       ];
       setProducts(defaultProducts);
-      localStorage.setItem('products', JSON.stringify(defaultProducts));
+      localStorage.setItem("products", JSON.stringify(defaultProducts));
     }
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem('products', JSON.stringify(products));
-  }, [products]);
 
   const handleProductClick = (product) => {
     setSelectedProduct(product);
@@ -37,47 +68,35 @@ function App() {
 
   const handlePurchase = () => {
     if (selectedProduct) {
-      alert(`Вы купили ${selectedProduct.name} за $${selectedProduct.price}!`);
+      alert(`Вы купили ${selectedProduct.name} за ${selectedProduct.price} ₴!`);
       const updatedProducts = products.filter(product => product.id !== selectedProduct.id);
       setProducts(updatedProducts);
-      localStorage.setItem('products', JSON.stringify(updatedProducts));
+      localStorage.setItem("products", JSON.stringify(updatedProducts));
       setSelectedProduct(null);
     }
   };
 
   return (
       <div className="Catalog">
-        <div className="catalog-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'flex-start', alignItems: 'flex-start' }}>
+        <div className="catalog-container">
           {products.map((product) => (
-              <div key={product.id} className="product-card" onClick={() => handleProductClick(product)}>
-                {product.image && (
-                    <img src={product.image} alt={product.name} style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
-                )}
-                <h2>{product.name.length > 10 ? `${product.name.substring(0, 7)}...` : product.name}</h2>
-                <p>{product.description ? (product.description.length > 30 ? `${product.description.substring(0, 7)}...` : product.description) : 'Описание отсутствует'}</p>
-                <p>Цена: ${product.price}</p>
-              </div>
+              <ProductCard key={product.id} product={product} onClick={handleProductClick} />
           ))}
         </div>
-
         {selectedProduct && (
             <div className="form-modal">
               <div className="modal-container">
-                <h2 style={{ textAlign: 'center', fontWeight: 'bold' }}>{selectedProduct.name}</h2>
-                <p style={{ textAlign: 'center', fontStyle: 'italic' }}>{selectedProduct.description ? selectedProduct.description : 'Описание отсутствует'}</p>
-                <p style={{ fontSize: '18px', fontWeight: 'bold' }}>Цена: ${selectedProduct.price}</p>
-                {selectedProduct.image && (
-                    <div style={{ textAlign: 'center', marginBottom: '10px' }}>
-                      <img src={selectedProduct.image} alt={selectedProduct.name} style={{ width: '150px', height: '150px', objectFit: 'cover', borderRadius: '10px' }} />
-                    </div>
-                )}
-                <button onClick={handlePurchase}>Купить</button>
-                <button onClick={() => setSelectedProduct(null)}>Закрыть</button>
+                <h2 className="modal-title">{selectedProduct.name}</h2>
+                <p className="modal-description">{selectedProduct.description || "Описание отсутствует"}</p>
+                <p className="modal-price">Цена: {selectedProduct.price} ₴</p>
+                <img src={selectedProduct.image} alt={selectedProduct.name} className="modal-image" />
+                <button className="modal-buy-button" onClick={handlePurchase}>Купить</button>
+                <button className="modal-close-button" onClick={() => setSelectedProduct(null)}>Закрыть</button>
               </div>
             </div>
         )}
       </div>
   );
-}
+};
 
-export default App;
+export default ProductList;

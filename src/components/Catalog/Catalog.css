@@ -1,188 +1,110 @@
-/* Убираем прокрутку */
-body{
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-.Catalog {
-    width: 100vw;
-    height: 100vh; /* Ensure full viewport height */
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, black, white);
-    background-size: 200% 200%;
-    animation: gradientAnimation 10s ease infinite;
-    display: flex;
-    flex-direction: column; /* Ensures content stacks correctly */
-    justify-content: center; /* Centers content properly */
-    align-items: center;
-    overflow: hidden;
-}
-
-
-/* Анимация градиента от черного до белого */
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-/* Настройка для видимости catalog-container */
 .catalog-container {
-    margin-top: 70px;
-    background-color: rgba(240, 248, 255, 0.9); /* AliceBlue с 90% прозрачностью */
-    width: 91.5vw;
-    height: 85vh;
-    border-radius: 10px;
-    padding: 20px;
-    overflow-y: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 80px;
-    opacity: 0.9;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.catalog-offers {
-    display: flex;
-    flex-wrap: wrap;
+    align-items: flex-start;
     gap: 20px;
-    justify-content: center;
+    margin: 120px 120px 0 100px;
 }
 
 .product-card {
-    margin: 10px;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    height: 200px;
-    width: 150px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    max-width: 320px;
+    height: 550px;
+    position: relative;
+    width: calc(25% + 100px);
+    overflow: visible;
+    border-radius: 35px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    z-index: 0;
 }
 
 .product-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-3px);
+    z-index: 10;
 }
 
-.product-card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.product-card p {
-    font-size: 1rem;
-    color: gray;
-}
-
-/* Modal Overlay */
-.form-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+.product-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    height: 350px;
 }
 
-/* Modal Container */
-.modal-container {
-    background-color: #fff;
-    padding: 20px;
-    height: 80vh;
-    border-radius: 8px;
-    width: 50vw;
-    max-width: 90%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.product-image {
+    max-width: 100%;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.product-title {
+    height: 90px;
+    margin: 0;
+    font-size: 30px;
+    color: #000;
+    font-weight: 500;
+    line-height: 1.2;
     text-align: left;
-    overflow: auto;
-    position: relative;
 }
 
-.modal-container button{
-    position: relative;
-    top:53%;
-    left:28%;
-    margin: 10px;
-    width: 150px;
-    color: black;
-    transition: transform 0.3s ease;
+.buy-block {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.modal-container button:hover{
-    transform: scale(1.1);
-    background-color: black;
-    color: white;
-    border-color: black;
+.product-price {
+    margin: 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+    color: #000;
+    font-family: "Jost", sans-serif;
 }
 
-.modal-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
+.shopping-cart {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #449653;
+    transition: transform 0.2s;
 }
 
-label {
-    font-weight: bold;
-    margin-bottom: 8px;
-    display: block;
-    color: #333;
+.product-description {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 550px;
+
+    background: #fff;
+    border-radius: 0 0 35px 35px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    color: #635F5F;
+
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+    padding: 0 20px;
 }
 
-input[type="text"],
-input[type="number"],
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
+.product-card:hover .product-description {
+    height: auto;
+    opacity: 1;
+    padding: 10px 20px;
 }
 
-textarea {
-    resize: vertical;
-    min-height: 100px;
+@media (max-width: 1024px) {
+    .product-card {
+        width: calc(50% - 20px);
+    }
 }
 
-
-button[type="button"]:first-of-type {
-    background-color: #4CAF50;
-    color: white;
-}
-
-button[type="button"]:first-of-type:hover {
-    background-color: #45a049;
-}
-
-button[type="button"]:nth-of-type(2) {
-    background-color: #f44336;
-    color: white;
-    margin-left: 10px;
-}
-
-button[type="button"]:nth-of-type(2):hover {
-    background-color: #e53935;
-}
-
-@media (max-width: 500px) {
-    .modal-container {
-        width: 90%;
+@media (max-width: 768px) {
+    .product-card {
+        width: calc(100% - 20px);
     }
 }
