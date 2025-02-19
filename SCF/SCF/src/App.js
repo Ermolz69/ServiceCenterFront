@@ -4,6 +4,7 @@ import Home from "./components/Home/Home";
 import Catalog from "./components/Catalog/Catalog";
 import NavBar from "./components/NavBar/NavBar";
 import About from "./components/About us/About";
+import Contact from "./components/Contacts/Contacts"
 
 
 
@@ -15,6 +16,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/catalog" element={<Catalog />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/contacts" element={<Contact />} />
             </Routes>
         </Router>
 

@@ -1,3 +1,7 @@
+.about-container {
+    height: 6200px;
+}
+
 .headDiv{
     margin-top: 87px;
     width: 1720px;
@@ -428,33 +432,209 @@
     bottom: 791px;
 }
 
-.Offer1{
-    width: 579px;
-    height: 367px;
+.offer-grid {
+    display: grid;
+    grid-template-columns: 653px 1fr;  /* First column: 653px, Second column: Flexible */
+    grid-template-rows: repeat(2, auto); /* Creates 2 rows */
+    gap: 87px 57px; /* First value: row gap (vertical), Second value: column gap (horizontal) */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    margin-top: 20px; /* Optional: Add margin if needed */
+    position: relative;
+    bottom: 740px;
+    left: 355px;
+}
+
+
+
+.Offer, .Offer2, .Offer3, .Offer4 {
+    /* Your individual styles for each offer, like width, height, etc. */
     flex-shrink: 0;
     border-radius: 31px;
     background: #FFF;
     position: relative;
-    left: 365px;
-    bottom: 734px;
+    padding: 15px 10px 0 10px;   
 }
 
-.OfferText{
+.Offer {
+    width: 579px;
+    height: 367px;
+    position: relative;
+    bottom: 50px;
+}
+
+.Offer2 {
+    width: 588px;
+    height: 424px;
+    padding-bottom: 49px;
+}
+
+.Offer3 {
+    width: 579px;
+    height: 282px;
+    position: relative;
+    bottom: 50px;
+}
+
+.Offer4 {
+    width: 579px;
+    height: 267px;
+}
+
+.OfferText, .Offer2Text, .Offer3Text, .Offer4Text {
     color: #000;
     font-family: Jost;
     font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 15px;
+    position: relative;
+}
+
+.OfferText {
+    width: 549px;
+    height: 293px;
+
+}
+
+.Offer2Text {
+    width: 549px;
+    height: 303px;
+    padding-bottom: 20px;
+}
+
+.Offer3Text {
+    width: 545px;
+    height: 210px;
+}
+
+.Offer4Text {
+    width: 545px;
+    height: 210px;
+}
+
+.container{
+    position: relative;
+}
+
+.head2Div{
+    align-items: center;
+    justify-content: center;
+    width: 1720px;
+    height: 492px;
+    flex-shrink: 0;
+    background: #8C6D51;
+    justify-self: center;
+    position: relative;
+    bottom: 700px;
+}
+.head2Text{
+    width: 841px;
+    height: 368px;
+    margin-left: 59px;
+    position: relative;
+    top:35px;
+}
+.head2Text p{
+    position: relative;
+    top: 40px;
+    width: 841px;
+    height: 222px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Jost;
+    font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    width: 549px;
-    height: 293px;
-    flex-shrink: 0;
-    padding-bottom: 49px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 15px;
-    position: relative;
-    top: 15px;
-    left:10px;
+}
 
+.head2Text h2{
+    position: relative;
+    top: 40px;
+    width: 368px;
+    height: 60px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Jost;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.image9Container {
+    width: 590px;
+    height: 351px;
+    flex-shrink: 0;
+    border-radius: 31px;
+    background: url("/public/image9.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 1004px;
+    bottom: 297px;
+}
+
+.Offer2Header{
+    color: #000;
+    font-family: Jost;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 387px;
+    height: 69px;
+    flex-shrink: 0;
+    position: relative;
+    left: 808px;
+    bottom: 600px;
+}
+
+.ChooseText{
+    width: 496px;
+    height: 139px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Jost;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.choose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+    grid-template-rows: auto auto; /* Two rows */
+    gap: 57px 184px; /* Adjust row and column spacing */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    text-align: center; /* Centers text */
+    position: relative;
+    bottom: 600px;
+    justify-self: center;
+}
+
+.choose-grid .ChooseText:last-child {
+    grid-column: span 2; /* Makes the last item span across both columns */
+    justify-self: center; /* Centers the last item */
+}
+
+.LastText{
+    width: 1511px;
+    height: 260px;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-family: Jost;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    justify-self: center;
+    position: relative;
+    bottom: 387px;
 }
