@@ -12,7 +12,6 @@ const NavBar = () => {
         navigate(path);
     };
 
-    // Закрываем меню при изменении маршрута
     useEffect(() => {
         setMenuOpen(false);
     }, [location.pathname]);

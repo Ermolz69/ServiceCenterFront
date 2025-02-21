@@ -5,6 +5,7 @@ import Catalog from "./components/Catalog/Catalog";
 import NavBar from "./components/NavBar/NavBar";
 import About from "./components/About us/About";
 import Contacts from "./components/Contacts/Contacts";
+import Repair from "./components/Repair/Repair";
 
 
 
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/catalog" element={<Catalog />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contacts" element={<Contacts />} />
+                <Route path="/repair" element={<Repair />} />
             </Routes>
         </Router>
 
