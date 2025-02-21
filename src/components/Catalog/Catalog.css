@@ -36,7 +36,8 @@
 
 .product-image {
     max-width: 100%;
-    height: 350px;
+    height: auto;
+    max-height: 350px;
     border-radius: 10px;
 }
 
