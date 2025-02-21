@@ -1,21 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Home.css";
-import NavBar from "../NavBar/NavBar";
 
 
 const Home = () => {
+    const navigate = useNavigate();
+
     return (
         <div>
             <section className="home-container">
             <div className="home-content">
                 <h1>
                     We sell and repair, and most <br />
-                    importantly, <strong>we deliver quality.</strong>
+                    importantly, we deliver quality.
                 </h1>
                 <div className="home-buttons">
-                    <Link to="/catalog" className="btn">Buy now</Link>
-                    <Link to="/repair" className="btn">Repair</Link>
+                    <button className="btn" onClick={() => navigate("/catalog")}>Buy now</button>
+                    <button className="btn" onClick={() => navigate("/repair")}>Repair</button>
                 </div>
             </div>
             <div className="image-container">

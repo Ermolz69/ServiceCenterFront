@@ -103,6 +103,7 @@
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
+        margin-top: 20px;
     }
 
     .nav-links li {

@@ -26,8 +26,10 @@ const ProductCard = ({ product, onAddToCart }) => {
 
         <div className="product-description">
           <p>
-            Пример длинного описания: характеристики, особенности,
-            и т.д. Можно расширять при желании.
+            Екран 15.6" IPS (1920x1080) Full HD 144 Гц, матовий /
+            AMD Ryzen 7 7435HS (3.1 - 4.5 ГГц) / RAM 16 ГБ / SSD 512 ГБ /
+            nVidia GeForce RTX 4060, 8 ГБ / без ОД / LAN / Wi-Fi / Bluetooth /
+            веб-камера / без ОС / 2.2 кг / сірий з чорним
           </p>
         </div>
       </div>

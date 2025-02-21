@@ -1,0 +1,640 @@
+.about-container {
+    height: 6200px;
+}
+
+.headDiv{
+    margin-top: 87px;
+    width: 1720px;
+    height: 492px;
+    flex-shrink: 0;
+    background: #8C6D51;
+    justify-self: center;
+}
+.headText{
+    width: 841px;
+    height: 368px;
+    margin-left: 59px;
+    position: relative;
+    top:35px;
+}
+.headText p{
+    color: #FFF;
+    font-family: Jost;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.imageContainer {
+    width: 522px;
+    height: 535px;
+    flex-shrink: 0;
+    border-radius: 31px;
+    background: url("/public/Assets/Images/image1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 1004px;
+    bottom: 277px;
+}
+
+.imageContainer2 {
+    width: 522px;
+    height: 535px;
+    flex-shrink: 0;
+    border-radius: 31px;
+    background: url("/public/Assets/Images/image2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 224px;
+    top:201px;
+}
+
+.DivText1{
+    width: 748px;
+    height: 506px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Jost;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    left: 1000px;
+    top: -257px;
+}
+
+.Profile1{
+    width: 760px;
+    height: 315px;
+    flex-shrink: 0;
+    background: #FFF;
+    position: relative;
+    left:138px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    top:-100px;
+}
+
+.Profile1c1{
+    width: 399px;
+    height: 64px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Jost;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    margin-left: 52px;
+    top: 42px;
+}
+
+.Profile1c2{
+    width: 394px;
+    height: 134px;
+    color: #000;
+    font-family: Jost;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    margin-left: 52px;
+    top: 69px;
+}
+
+.Profile1Image{
+    width: 326px;
+    height: 326px;
+    flex-shrink: 0;
+    border-radius: 326px;
+    background: url("/public/Assets/Images/image3.jpg") lightgray 50% / cover no-repeat;
+    position: relative;
+    left: 475px;
+    bottom: 150px;
+    overflow: hidden;
+}
+
+.Profile2{
+    width: 760px;
+    height: 315px;
+    flex-shrink: 0;
+    background: #FFF;
+    position: relative;
+    left:1053px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    top:-445px;
+}
+
+.Profile2c1{
+    width: 399px;
+    height: 64px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Jost;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    margin-left: 52px;
+    top: 42px;
+}
+
+.Profile2c2{
+    width: 394px;
+    height: 134px;
+    color: #000;
+    font-family: Jost;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    margin-left: 52px;
+    top: 69px;
+}
+
+.Profile2Image{
+    width: 326px;
+    height: 326px;
+    flex-shrink: 0;
+    border-radius: 326px;
+    background: url("/public/Assets/Images/image4.png") lightgray 50% / cover no-repeat;
+    position: relative;
+    left: 475px;
+    bottom: 150px;
+    overflow: hidden;
+}
+
+.Profile3{
+    width: 760px;
+    height: 315px;
+    flex-shrink: 0;
+    background: #FFF;
+    position: relative;
+    left:138px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    bottom:380px;
+}
+
+.Profile3c1{
+    width: 399px;
+    height: 64px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Jost;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    margin-left: 52px;
+    top: 42px;
+}
+
+.Profile3c2{
+    width: 394px;
+    height: 134px;
+    color: #000;
+    font-family: Jost;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    margin-left: 52px;
+    top: 69px;
+}
+
+.Profile3Image{
+    width: 326px;
+    height: 326px;
+    flex-shrink: 0;
+    border-radius: 326px;
+    background: url("/public/Assets/Images/image5.jpg") lightgray 50% / cover no-repeat;
+    position: relative;
+    left: 475px;
+    bottom: 150px;
+    overflow: hidden;
+}
+
+.Profile4{
+    width: 760px;
+    height: 315px;
+    flex-shrink: 0;
+    background: #FFF;
+    position: relative;
+    left:1053px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    bottom:725px;
+}
+
+.Profile4c1{
+    width: 399px;
+    height: 64px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Jost;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    margin-left: 52px;
+    top: 42px;
+}
+
+.Profile4c2{
+    width: 394px;
+    height: 134px;
+    color: #000;
+    font-family: Jost;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    margin-left: 52px;
+    top: 69px;
+}
+
+.Profile4Image{
+    width: 326px;
+    height: 326px;
+    flex-shrink: 0;
+    border-radius: 326px;
+    background: url("/public/Assets/Images/image6.png") lightgray 50% / cover no-repeat;
+    position: relative;
+    left: 475px;
+    bottom: 150px;
+    overflow: hidden;
+}
+
+.Profile5{
+    width: 760px;
+    height: 315px;
+    flex-shrink: 0;
+    background: #FFF;
+    position: relative;
+    left:138px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    bottom:640px;
+}
+
+.Profile5c1{
+    width: 399px;
+    height: 64px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Jost;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    margin-left: 52px;
+    top: 42px;
+}
+
+.Profile5c2{
+    width: 394px;
+    height: 134px;
+    color: #000;
+    font-family: Jost;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    margin-left: 52px;
+    top: 69px;
+}
+
+.Profile5Image{
+    width: 326px;
+    height: 326px;
+    flex-shrink: 0;
+    border-radius: 326px;
+    background: url("/public/Assets/Images/image7.png") lightgray 50% / cover no-repeat;
+    position: relative;
+    left: 475px;
+    bottom: 150px;
+    overflow: hidden;
+}
+
+.Profile6{
+    width: 760px;
+    height: 315px;
+    flex-shrink: 0;
+    background: #FFF;
+    position: relative;
+    left:1053px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    bottom:982px;
+}
+
+.Profile6c1{
+    width: 399px;
+    height: 64px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Jost;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    margin-left: 52px;
+    top: 42px;
+}
+
+.Profile6c2{
+    width: 394px;
+    height: 134px;
+    color: #000;
+    font-family: Jost;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    margin-left: 52px;
+    top: 69px;
+}
+
+.Profile6Image{
+    width: 326px;
+    height: 326px;
+    flex-shrink: 0;
+    border-radius: 326px;
+    background: url("/public/Assets/Images/image8.png") lightgray 50% / cover no-repeat;
+    position: relative;
+    left: 475px;
+    bottom: 150px;
+    overflow: hidden;
+}
+
+.Story{
+    width: 253px;
+    height: 69px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Jost;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    left:193px;
+    bottom: 900px;
+}
+
+.StoryText{
+    width: 1518px;
+    height: 231px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Jost;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: relative;
+    left: 193px;
+    bottom: 878px;
+}
+
+.OfferHeader{
+    color: #000;
+    font-family: Jost;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 357px;
+    height: 69px;
+    flex-shrink: 0;
+    position: relative;
+    left: 808px;
+    bottom: 791px;
+}
+
+.offer-grid {
+    display: grid;
+    grid-template-columns: 653px 1fr;  /* First column: 653px, Second column: Flexible */
+    grid-template-rows: repeat(2, auto); /* Creates 2 rows */
+    gap: 87px 57px; /* First value: row gap (vertical), Second value: column gap (horizontal) */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    margin-top: 20px; /* Optional: Add margin if needed */
+    position: relative;
+    bottom: 740px;
+    left: 355px;
+}
+
+
+
+.Offer, .Offer2, .Offer3, .Offer4 {
+    /* Your individual styles for each offer, like width, height, etc. */
+    flex-shrink: 0;
+    border-radius: 31px;
+    background: #FFF;
+    position: relative;
+    padding: 15px 10px 0 10px;
+}
+
+.Offer {
+    width: 579px;
+    height: 367px;
+    position: relative;
+    bottom: 50px;
+}
+
+.Offer2 {
+    width: 588px;
+    height: 424px;
+    padding-bottom: 49px;
+}
+
+.Offer3 {
+    width: 579px;
+    height: 282px;
+    position: relative;
+    bottom: 50px;
+}
+
+.Offer4 {
+    width: 579px;
+    height: 267px;
+}
+
+.OfferText, .Offer2Text, .Offer3Text, .Offer4Text {
+    color: #000;
+    font-family: Jost;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    margin-left: 15px;
+    position: relative;
+}
+
+.OfferText {
+    width: 549px;
+    height: 293px;
+
+}
+
+.Offer2Text {
+    width: 549px;
+    height: 303px;
+    padding-bottom: 20px;
+}
+
+.Offer3Text {
+    width: 545px;
+    height: 210px;
+}
+
+.Offer4Text {
+    width: 545px;
+    height: 210px;
+}
+
+.container{
+    position: relative;
+}
+
+.head2Div{
+    align-items: center;
+    justify-content: center;
+    width: 1720px;
+    height: 492px;
+    flex-shrink: 0;
+    background: #8C6D51;
+    justify-self: center;
+    position: relative;
+    bottom: 700px;
+}
+.head2Text{
+    width: 841px;
+    height: 368px;
+    margin-left: 59px;
+    position: relative;
+    top:35px;
+}
+.head2Text p{
+    position: relative;
+    top: 40px;
+    width: 841px;
+    height: 222px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Jost;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.head2Text h2{
+    position: relative;
+    top: 40px;
+    width: 368px;
+    height: 60px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Jost;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.image9Container {
+    width: 590px;
+    height: 351px;
+    flex-shrink: 0;
+    border-radius: 31px;
+    background: url("/public/Assets/Images/image9.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    left: 1004px;
+    bottom: 297px;
+}
+
+.Offer2Header{
+    color: #000;
+    font-family: Jost;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 387px;
+    height: 69px;
+    flex-shrink: 0;
+    position: relative;
+    left: 808px;
+    bottom: 600px;
+}
+
+.ChooseText{
+    width: 496px;
+    height: 139px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Jost;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.choose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+    grid-template-rows: auto auto; /* Two rows */
+    gap: 57px 184px; /* Adjust row and column spacing */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    text-align: center; /* Centers text */
+    position: relative;
+    bottom: 600px;
+    justify-self: center;
+}
+
+.choose-grid .ChooseText:last-child {
+    grid-column: span 2; /* Makes the last item span across both columns */
+    justify-self: center; /* Centers the last item */
+}
+
+.LastText{
+    width: 1511px;
+    height: 260px;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-family: Jost;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    justify-self: center;
+    position: relative;
+    bottom: 387px;
+}
