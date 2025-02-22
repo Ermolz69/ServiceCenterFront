@@ -1,0 +1,212 @@
+.contact{
+    height: 1550px;
+}
+.HeadDiv{
+    width: 1720px;
+    height: 373px;
+    flex-shrink: 0;
+    background: #8C6D51;
+    justify-self: center;
+    margin-top: 87px;
+    display: flex;
+}
+
+.HeadDiv h1{
+    width: 216px;
+    height: 36px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Jost;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: relative;
+    left: 88px;
+    top: 45px;
+}
+
+.HeadDivText{
+    flex: none;
+    color: #FFF;
+    font-family: Jost;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    width: 995px;
+    height: 146px;
+    flex-shrink: 0;
+    position: relative;
+    left: -128px;
+    top:154px;
+}
+
+.image10container{
+    width: 459px;
+    height: 326px;
+    flex-shrink: 0;
+    border-radius: 31px;
+    background: url("/public/Assets/Images/image10.jpg") lightgray 50% / cover no-repeat;
+    align-self: center;
+}
+
+.ContactsContainer{
+    width: 410px;
+    height: 410px;
+    flex-shrink: 0;
+    border-radius: 31px;
+    background: #FFF;
+    position: relative;
+    top:87px;
+    left:188px;
+}
+
+.ContactsContainer2{
+    width: 410px;
+    height: 410px;
+    flex-shrink: 0;
+    border-radius: 31px;
+    background: #FFF;
+    position: relative;
+    bottom: 320px;
+    left:752px;
+}
+
+.ContactsContainer2 h2{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: relative;
+    left: 121px;
+    bottom: 18px;
+}
+
+.ContactsContainer2 p{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 30px;
+    margin-left: 44px;
+    margin-right: 42px;
+}
+
+.ContactsContainer3{
+    width: 410px;
+    height: 410px;
+    flex-shrink: 0;
+    border-radius: 31px;
+    background: #FFF;
+    position: relative;
+    bottom: 730px;
+    left: 1322px;
+}
+
+.ContactsContainer3 h2{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: relative;
+    left: 121px;
+    bottom: 18px;
+}
+
+.ContactsContainer3 p{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 30px;
+    margin-left: 44px;
+    margin-right: 42px;
+}
+
+.ContactsContainer4{
+    width: 410px;
+    height: 410px;
+    flex-shrink: 0;
+    border-radius: 31px;
+    background: #FFF;
+    position: relative;
+    bottom: 643px;
+    left: 188px;
+}
+
+.ContactsContainer4 h2{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: relative;
+    left: 121px;
+    bottom: 18px;
+}
+
+.ContactsContainer4 p{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 30px;
+    margin-left: 44px;
+    margin-right: 42px;
+}
+
+.ContactsContainer5{
+    width: 410px;
+    height: 410px;
+    flex-shrink: 0;
+    border-radius: 31px;
+    background: #FFF;
+    position: relative;
+    bottom: 1050px;
+    left: 755px;
+}
+
+.ContactsContainer5 h2{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: relative;
+    left: 121px;
+    bottom: 18px;
+}
+
+.ContactsContainer5 p{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 30px;
+    margin-left: 44px;
+    margin-right: 42px;
+}
+
+.ContactsText{
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}

@@ -1,0 +1,249 @@
+.catalog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 120px 120px 0 100px;
+}
+
+.product-card {
+    max-width: 320px;
+    height: 550px;
+    position: relative;
+    width: calc(25% + 100px);
+    overflow: visible;
+    border-radius: 35px;
+    background: #FFF;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    z-index: 0;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    z-index: 10;
+}
+
+.product-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 350px;
+    border-radius: 10px;
+}
+
+.product-title {
+    height: 90px;
+    margin: 0;
+    font-size: 30px;
+    color: #000;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: left;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.buy-block {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-price {
+    margin: 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+    color: #000;
+    font-family: "Jost", sans-serif;
+}
+
+.shopping-cart {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #449653;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.product-description {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 550px;
+
+    background: #fff;
+    border-radius: 0 0 35px 35px;
+    color: #635F5F;
+
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+
+    transform: translateY(-10px);
+    transition: max-height 0.5s ease, opacity 0.3s ease, transform 0.3s ease;
+    padding: 0 20px;
+}
+
+.product-card:hover .product-description {
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+    padding: 10px 20px;
+}
+
+
+
+.form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+}
+
+.modal-title {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.modal-description {
+    margin: 10px 0;
+    color: #555;
+}
+
+.modal-price {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.modal-image {
+    width: fit-content;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.quantity-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.quantity-block label {
+    color: black;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.quantity-block input {
+    width: 80px;
+    padding: 5px;
+    text-align: center;
+}
+
+.modal-buy-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.modal-buy-button:hover {
+    background-color: #218838;
+}
+
+.modal-close-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.modal-close-button:hover {
+    background-color: #c82333;
+}
+
+.catalog-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #28a745;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.message-close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    .product-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog-container {
+        margin: 120px 30px 0 30px;
+    }
+    .product-card {
+        width: 100%;
+    }
+}
