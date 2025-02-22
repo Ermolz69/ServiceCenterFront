@@ -27,15 +27,62 @@ const NavBar = () => {
             </div>
 
             <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
-                <li><span className={location.pathname === "/" ? "active" : ""} onClick={() => handleNavigation("/")}>Home</span></li>
-                <li><span className={location.pathname === "/catalog" ? "active" : ""} onClick={() => handleNavigation("/catalog")}>Catalog</span></li>
-                <li><span className={location.pathname === "/about" ? "active" : ""} onClick={() => handleNavigation("/about")}>About us</span></li>
-                <li><span className={location.pathname === "/contacts" ? "active" : ""} onClick={() => handleNavigation("/contacts")}>Contacts</span></li>
-                <li><span className={location.pathname === "/repair" ? "active" : ""} onClick={() => handleNavigation("/repair")}>Repair</span></li>
+                <li>
+          <span
+              className={location.pathname === "/" ? "active" : ""}
+              onClick={() => handleNavigation("/")}
+          >
+            Home
+          </span>
+                </li>
+                <li>
+          <span
+              className={location.pathname === "/catalog" ? "active" : ""}
+              onClick={() => handleNavigation("/catalog")}
+          >
+            Catalog
+          </span>
+                </li>
+                <li>
+          <span
+              className={location.pathname === "/about" ? "active" : ""}
+              onClick={() => handleNavigation("/about")}
+          >
+            About us
+          </span>
+                </li>
+                <li>
+          <span
+              className={location.pathname === "/contacts" ? "active" : ""}
+              onClick={() => handleNavigation("/contacts")}
+          >
+            Contacts
+          </span>
+                </li>
+                <li>
+          <span
+              className={location.pathname === "/repair" ? "active" : ""}
+              onClick={() => handleNavigation("/repair")}
+          >
+            Repair
+          </span>
+                </li>
+
+                {menuOpen && (
+                    <li>
+            <span
+                className={location.pathname === "/cart" ? "active" : ""}
+                onClick={() => handleNavigation("/cart")}
+            >
+              Cart
+            </span>
+                    </li>
+                )}
             </ul>
 
             <div className="nav-actions">
                 <img
+                    onClick={() => handleNavigation("/cart")}
                     src={`${process.env.PUBLIC_URL}/Assets/shopping-cart.svg`}
                     alt="Shopping Cart"
                     className="shopping-cart"

@@ -1,19 +1,56 @@
-// import { motion } from "framer-motion";
-import { useState } from "react";
+import React, { useState } from "react";
+import { createReport } from "../../services/reportService";
 import FloatingLabelInput from "./FloatingLabelInput";
 import "./Repair.css";
 
 const Repair = () => {
+    const [successMessage, setSuccessMessage] = useState("");
+
     const [fullName, setFullName] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
-
     const [category, setCategory] = useState("");
-
     const [description, setDescription] = useState("");
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const reportData = {
+            name: fullName,
+            phone,
+            email,
+            deviceType: category,
+            problemDescription: description,
+            status: 0,
+            createdAt: new Date().toISOString()
+        };
+        try {
+            await createReport(reportData);
+            setSuccessMessage("Report has been created successfully!");
+            setFullName("");
+            setPhone("");
+            setEmail("");
+            setCategory("");
+            setDescription("");
+            setTimeout(() => {
+                setSuccessMessage("");
+            }, 3000);
+        } catch (error) {
+            console.error("Error creating report:", error);
+            alert("Failed to create report.");
+        }
+    };
 
     return (
         <div className="container">
+            {successMessage && (
+                <div className="toast-success">
+                    <span>{successMessage}</span>
+                    <button className="toast-close" onClick={() => setSuccessMessage("")}>
+                        &times;
+                    </button>
+                </div>
+            )}
+
             <div className="text-container">
                 <h1 className="title">Creation of a repair request</h1>
                 <p className="description">
@@ -22,7 +59,7 @@ const Repair = () => {
                 </p>
             </div>
 
-            <div className="input-container">
+            <form className="input-container" onSubmit={handleSubmit}>
                 <FloatingLabelInput
                     label="Fullname"
                     value={fullName}
@@ -71,7 +108,11 @@ const Repair = () => {
                         onChange={(e) => setDescription(e.target.value)}
                     />
                 </div>
-            </div>
+
+                <button type="submit" className="submit-button">
+                    Send request
+                </button>
+            </form>
         </div>
     );
 };

@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar/NavBar";
 import About from "./components/About us/About";
 import Contacts from "./components/Contacts/Contacts";
 import Repair from "./components/Repair/Repair";
+import Cart from "./components/Shopping cart/Cart";
 
 
 
@@ -16,10 +17,13 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/catalog" element={<Catalog />} />
+                <Route path="/catalog/:id" element={<Catalog />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/repair" element={<Repair />} />
+                <Route path="/cart" element={<Cart />} />
             </Routes>
+
         </Router>
 
     );

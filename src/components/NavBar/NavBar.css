@@ -65,6 +65,10 @@
     color: #E6E4D8;
 }
 
+.display-none{
+    display: none;
+}
+
 @media (max-width: 1464px) {
     .nav-bar {
         padding: 15px 30px;

@@ -110,6 +110,129 @@
 }
 
 
+
+.form-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+}
+
+.modal-title {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.modal-description {
+    margin: 10px 0;
+    color: #555;
+}
+
+.modal-price {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.modal-image {
+    width: fit-content;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.quantity-block {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.quantity-block label {
+    color: black;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.quantity-block input {
+    width: 80px;
+    padding: 5px;
+    text-align: center;
+}
+
+.modal-buy-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.modal-buy-button:hover {
+    background-color: #218838;
+}
+
+.modal-close-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.modal-close-button:hover {
+    background-color: #c82333;
+}
+
+.catalog-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #28a745;
+    color: #fff;
+    padding: 12px 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.message-close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+
+
 @media (max-width: 1024px) {
     .product-card {
         width: calc(50% - 20px);

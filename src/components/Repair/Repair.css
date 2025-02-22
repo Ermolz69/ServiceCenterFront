@@ -82,6 +82,21 @@ textarea.standard-input {
     border: 1px solid #8C6D51;
 }
 
+.submit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #28a745;
+    color: #FFF;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #218838;
+    }
+}
+
 @media (max-width: 480px) {
     .input-container {
         margin: 0 15px;
