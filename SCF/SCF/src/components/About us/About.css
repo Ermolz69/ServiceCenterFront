@@ -387,6 +387,15 @@
     overflow: hidden;
 }
 
+.Profile1, .Profile2, .Profile3, .Profile4, .Profile5, .Profile6{
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.Profile1:hover, .Profile2:hover, .Profile3:hover, .Profile4:hover, .Profile5:hover, .Profile6:hover{
+    transform: scale(1.1);
+}
+
 .Story{
     width: 253px;
     height: 69px;
@@ -602,6 +611,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    justify-self: center;
 }
 
 .choose-grid {
@@ -637,4 +647,222 @@
     justify-self: center;
     position: relative;
     bottom: 387px;
+}
+
+@media (max-width: 1464px) {
+    .about-container {
+        height: auto;
+    }
+
+    .head2Text h2{
+        transform: translateY(-40px);
+    }
+    .head2Text p{
+        transform: translateY(-20px);
+    }
+
+    .DivText1{
+        margin-top: 80px;
+        margin-bottom: 0px;
+        font-size: 25px;
+    }
+
+    .headDiv, .head2Div {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .head2Div{
+        position: relative;
+        bottom: 850px;
+    }
+
+    .head2Text p{
+        font-size: 20px;
+    }
+
+    .headText p, .head2Text p {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 25px;
+    }
+    .headText, .head2Text {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .imageContainer, .imageContainer2, .image9Container {
+        width: 80%;
+        height: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+    }
+
+    .DivText1 {
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        top: 0;
+    }
+
+    .offer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        left: 0;
+        bottom: 0;
+        margin: 0 auto;
+    }
+    .Profile2{
+        position: relative;
+        top:0px;
+    }
+
+    .Profile1{
+       position: relative;
+       top:0px;
+    }
+
+    .head2Div{
+        transform: translateY(800px);
+    }
+
+    .OfferHeader{
+        margin-top: 300px;
+        margin-bottom: 100px;
+    }
+
+    .Offer2{
+        transform: translateY(-50px);
+    }
+
+    .Offer4{
+        transform: translateY(-50px);
+    }
+
+    .head2Text p{
+        font-size: 20px;
+    }
+
+
+    .Offer, .Offer2, .Offer3, .Offer4 {
+        width: 80%;
+        margin: 0 auto;
+        left: 1%;
+        justify-items: center;
+    }
+
+    .choose-grid {
+        display: flex; /* Switch from grid to flex for easier control */
+        flex-direction: column; /* Stack items in a column */
+        gap: 30px; /* Add spacing between items */
+        align-items: center; /* Center items horizontally */
+        text-align: center; /* Ensure text is centered */
+        width: 100%; /* Make sure it spans the full width */
+        position: relative;
+        top:0px;
+        left: 4%;
+    }
+    
+    
+
+    .ChooseText
+    {
+        position: relative;
+    }
+
+
+    .Profile1, .Profile2, .Profile3, .Profile4, .Profile5, .Profile6 {
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        margin-bottom: 30px;
+    }
+
+    .Profile1Image, .Profile2Image, .Profile3Image, .Profile4Image, .Profile5Image, .Profile6Image {
+        width: 200px;
+        height: 200px;
+        left: 43%;
+        transform: translateX(100%);
+    }
+
+    
+    .Profile1:hover, .Profile2:hover, .Profile3:hover, .Profile4:hover, .Profile5:hover, .Profile6:hover{
+        transform: scale(1.05) translateX(-42%);
+    }
+
+    .Story, .StoryText, .OfferHeader, .Offer2Header, .LastText {
+        width: 90%;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+    }
+
+    .LastText{
+        font-size: 25px;
+        transform: translateX(-55%);
+        position: relative;
+        top: 200px;
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .Profile1Image, .Profile2Image, .Profile3Image, .Profile4Image, .Profile5Image, .Profile6Image {
+        background: none;
+    }
+    
+    .OfferText, .Offer2Text, .Offer3Text, .Offer4Text {
+        color: #000;
+        font-family: Jost;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: normal;
+        margin-left: 15px;
+        position: relative;
+        width: 90%;
+        height: 90%;
+    }
+
+    .Offer, .Offer2, .Offer3, .Offer4 {
+        width: 80%;
+        margin: 0 auto;
+        left: 1%;
+        justify-items: center;
+        padding-bottom: 40px;
+    }
+
+    .Offer2{
+        padding-bottom: 60px;
+    }
+
+    .OfferHeader{
+        position: relative;
+        margin-top:400px;
+    }
+    .offer-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .headText p{
+        font-size: 21px;
+    }
+
+    .head2Text p{
+        font-size: 19px;
+        transform: translateY(-50px);
+    }
+
+    .choose-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
 }
